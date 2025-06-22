@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I'm Sorry, Evvee</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      background-image: url('https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      text-shadow: 1px 1px 2px #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      backdrop-filter: blur(2px);
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .from {
+      font-style: italic;
+      font-size: 1em;
+      color: #ffd;
+    }
+
+    .heart {
+      font-size: 2em;
+      color: pink;
+      animation: heartbeat 1.5s infinite;
+    }
+
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      25% { transform: scale(1.2); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Music player -->
+  <audio id="bg-music" loop>
+    <source src="relaxing-piano-music-351844.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    document.addEventListener("click", () => {
+      const audio = document.getElementById("bg-music");
+      audio.play().catch(() => {});
+    }, { once: true });
+  </script>
+
+  <!-- Main content -->
+  <div class="card">
+    <h1>I'm Really Sorry, Evvee 😔</h1>
+    <p>
+      I know I messed up. I was in a bad mood, and I ended up hurting you... someone who means so much to me.  
+      You didn’t deserve that.  
+    </p>
+    <p>
+      Please forgive me. You're not just my best friend—you’re someone I deeply care about.  
+      I miss our fun chats and smiles. I promise I’ll be better. 💖
+    </p>
+    <div class="heart">💗</div>
+    <p class="from">With lots of love,<br>Akhil</p>
+  </div>
+</body>
+</html>
